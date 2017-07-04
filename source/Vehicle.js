@@ -54,18 +54,27 @@ Vehicle.prototype = {
 
 
 		// Draw a triangle rotated in the direction of velocity
+		
 		var theta = this.vel.heading() + PI/2;
+
+		imageMode(CENTER);
+		push();
+			translate(this.pos.x,this.pos.y);
+			rotate(theta-PI/2);
+			image(carImage, 0, 0, carImage.width/2, carImage.height/2);
+		pop();
+		/*
 		fill(127);
 		stroke(0);
 		strokeWeight(1);
 		push();
-		translate(this.pos.x,this.pos.y);
-		rotate(theta);
-		beginShape();
-		vertex(0, -this.r*2);
-		vertex(-this.r, this.r*2);
-		vertex(this.r, this.r*2);
-		endShape(CLOSE);
-		pop();
+			translate(this.pos.x,this.pos.y);
+			rotate(theta);
+			beginShape();
+			vertex(0, -this.r*2);
+			vertex(-this.r, this.r*2);
+			vertex(this.r, this.r*2);
+			endShape(CLOSE);
+		pop();*/
 	}
 } // end Vehicle

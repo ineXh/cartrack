@@ -2,6 +2,7 @@ function setup() {
   window.scrollTo(0,1);
   document.body.style.overflow = 'hidden';
   bg = loadImage("assets/sand.png");
+  carImage = loadImage("assets/car.png");
   createCanvas(window.innerWidth, window.innerHeight);
   vehicle = new Vehicle(window.innerWidth/2, window.innerHeight/2);
 }
